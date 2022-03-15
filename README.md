@@ -2,7 +2,6 @@
 
 - OUGGADI Mohammed-Aymane
 - KOURKI Kamal
-  …
 
 ===============
 
