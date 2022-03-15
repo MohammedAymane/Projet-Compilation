@@ -13,7 +13,7 @@ This μ-project is a very simple compiler…
 
 ## Sources
 
-Git repository: https://redmine-df.telecom-bretagne.eu/git/PROJECTNAME
+Git repository: https://github.com/MohammedAymane/Projet-Compilation
 
 (obviously, you _will_ use a version control system such as Git, IMT
 Atlantique provides a project management platform: use it!)
@@ -26,7 +26,7 @@ Release : tag 1.0 or commit acdeacdacdacdacd
 
 …retrieve the sources?
 
-git clone https://redmine-df.telecom-bretagne.eu/git/PROJECTNAME
+git clone https://github.com/MohammedAymane/Projet-Compilation.git
 
 …compile?
 
