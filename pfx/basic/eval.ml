@@ -13,8 +13,19 @@ let string_of_state (cmds,stack) =
 let step state =
   match state with
   | [], _ -> Error("Nothing to step",state)
+  | (Add|Sub|Pop)::_, i::[] -> Error("Nothing to step",state)
+  | (Add|Sub)::_, []->Error("Nothing to step",state)
   (* Valid configurations *)
-  | DefineMe :: q , stack          -> Ok (q, stack)
+  | Push(num):: q , stack            -> Ok (q, num::stack)
+  | Push(num):: q , []            -> Ok (q, num::[])
+  | Pop :: q , i::stack             -> Ok (q, stack)
+  | Add :: q , i::j::stack          -> Ok (q, (i+j)::stack)
+  | Sub :: q , i::j::stack          -> Ok (q, (i-j)::stack)
+  | Mul :: q , i::j::stack          -> Ok (q, (i*j)::stack)
+  | Div :: q , i::j::stack          -> Ok (q, (i/j)::stack)
+  | Rem :: q , i::j::stack          -> Ok (q, (i mod j)::stack)
+  | Swap :: q , i::j::stack         -> Ok (q, j::i::stack)
+
 
 let eval_program (numargs, cmds) args =
   let rec execute = function

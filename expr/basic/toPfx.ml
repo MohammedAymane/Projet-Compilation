@@ -1,7 +1,13 @@
 open Ast
+open BasicPfx.Ast
 
-let generate = function
-  | Const _ -> failwith "To implement"
-  | Binop(_,_,_) -> failwith "To implement"
-  | Uminus _ -> failwith "To implement"
-  | Var _ -> failwith "Not yet supported"
+let rec generate = function
+  | Const c -> [Push  c]
+  | Binop(op,e1,e2) -> (match op with
+	|Badd -> (generate e1)@(generate e2)@[Add]
+	|Bsub -> (generate e1)@(generate e2)@[Sub]
+	|Bdiv -> (generate e1)@(generate e2)@[Div]
+	|Bmul -> (generate e1)@(generate e2)@[Mul]
+	|Bmod -> (generate e1)@(generate e2)@[Mod]
+  | Uminus e -> (generate e)@(generate (Const 0))@[Sub]
+  | Var v -> " PUSH " ^ v
