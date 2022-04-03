@@ -1,5 +1,5 @@
 %{
-    open PfxAst
+    open Ast
     open Printf
   (* Ocaml code here*)
   let xx = print_endline ("test -----") 

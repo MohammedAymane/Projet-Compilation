@@ -5,7 +5,7 @@ let compile file =
     let input_file = open_in file in
     let lexbuf = Lexing.from_channel input_file in
       while true do
-        let pfx = PfxLexer.token lexbuf in
+        let pfx = Lexer.token lexbuf in
          match pfx with
 	| PUSH -> Printf.printf "PUSH\n"
 	| SWAP -> Printf.printf "SWAP\n"
@@ -21,8 +21,6 @@ let compile file =
       done
   with 
 	|Sys_error s ->print_endline ("Can't find file '" ^ file ^ "'")
-
-(*let file = Documents/Github/project-skeleton/Projet-Compilation/test_parser.pfx*)
 
 (* Here we add the parsing of the command line and link to the main function *)
 let _ =
