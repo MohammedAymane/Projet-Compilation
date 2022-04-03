@@ -92,39 +92,24 @@ project
 ├── dune
 ├── location.ml: module offering a data type for a location in a file
 └── location.mli
-===============
-
-## Progress
-
-- We stopped at question 10.1 (proof of derivation)
-- There is still a bug in question 8.3 (new version of generate function)
-- …
 
 ===============
 
 ## Know bugs and issues
 
-- We were not able to manage xxx…
-- Compiler fails when xxx…
-- …
+- We were not able to manage question 10.3 completely
 
 ===============
 
 ## Helpful resources
-
-- we used Stack Overflow to solve the problem of xxx :
-  https://stackoverflow/xxxxxxi
-  https://stackoverflow/yyyyyy
-- someone on GitHub provided an interesting example very similar to the answer of the question x.y : https://github.com/xxxx
-- …
+- we used this youtube channel for the parser & lexer https://www.youtube.com/channel/UCSZ5lYLg6ARj4Wow3ZQXQzA
+- we used Stack Ocaml documentation:
+  https://www.ocaml.org/docs/
 
 ===============
 
 ## Difficulties
-
-- team programming: having to use a VCS such as git and avoiding conflicts
+- Setting up the environment (WSL)
+- Running and testing the code
 - thinking functional
 - changing habits by using an unknown language
-- Not a single difficulty: the project was so easy that my 8-old brother did it
-  completely; the Ocaml language is so nice I enjoyed the project, …
-- …
