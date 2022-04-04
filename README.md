@@ -98,7 +98,7 @@ project
 ## Know bugs and issues
 
 - We were not able to manage question 10.3 completely
-
+- Question 10.4 (expl) & 11.1 (expl) not done
 ===============
 
 ## Helpful resources
